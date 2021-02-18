@@ -28,7 +28,13 @@ const EventDashboard = () => {
         <EventList events={events} deleteEvent={handleDeleteEvent} />
       </GridColumn>
       <GridColumn width={6}>
-        <h2>Event Filter</h2>
+        <input
+          type='date'
+          placeholder='Date'
+          name='date'
+          // value={values.date}
+          // onChange={(e) => handleInputChange(e)}
+        />
       </GridColumn>
     </Grid>
   );
