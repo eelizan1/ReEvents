@@ -7,7 +7,8 @@ export default function Sandbox() {
   // allows to act upon actions on the store
   const dispatch = useDispatch();
   // this hook allows access to the redux store state
-  const data = useSelector((state) => state.data);
+  // need test.data since we have a root reducer property as test for this data
+  const data = useSelector((state) => state.test.data);
   return (
     <>
       <h1>Testing 123</h1>

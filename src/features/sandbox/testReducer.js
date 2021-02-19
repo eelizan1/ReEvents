@@ -24,18 +24,18 @@ const initialState = {
 // reducer function to update store
 // theyc can take the store inital state, the action type to perform on the store, then a payload
 // payload can be some data that we want to do something with with out store
-export default function testReducer(state = initialState, action) {
+export default function testReducer(state = initialState, { type, payload }) {
   // do 'action' on the store data
-  switch (action.type) {
+  switch (type) {
     case INCREMENT_COUNTER:
       return {
         ...state, // return original sate
-        data: state.data + action.payload, // do the action upon the state and set it to data which is a property of the store
+        data: state.data + payload, // do the action upon the state and set it to data which is a property of the store
       };
     case DECREMENT_COUNTER:
       return {
         ...state,
-        data: state.data - action.payload,
+        data: state.data - payload,
       };
     default:
       return state;

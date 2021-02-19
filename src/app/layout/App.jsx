@@ -7,7 +7,7 @@ import { Container } from "semantic-ui-react";
 import "./App.css";
 import { Route } from "react-router-dom";
 import HomePage from "../../features/home/HomePage";
-import EventDetailedPage from "../../features/eventDetailed/EventDetailedPage";
+import EventDetailedPage from "../../features/events/eventDetailed/EventDetailedPage";
 import EventForm from "../../features/events/eventForm/EventForm";
 import Sandbox from "../../features/sandbox/Sandbox";
 
