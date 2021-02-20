@@ -10,11 +10,13 @@ import HomePage from "../../features/home/HomePage";
 import EventDetailedPage from "../../features/events/eventDetailed/EventDetailedPage";
 import EventForm from "../../features/events/eventForm/EventForm";
 import Sandbox from "../../features/sandbox/Sandbox";
+import ModalManager from "../common/modals/ModalManager";
 
 function App() {
   const { key } = useLocation();
   return (
     <>
+      <ModalManager />
       <Route exact path='/' component={HomePage} />
       {/* anything that has a route other than '/' then contain outside homepage to not sure nav bar */}
       <Route
