@@ -7,26 +7,10 @@ const EventDashboard = () => {
   // get events from store
   const { events } = useSelector((state) => state.event);
 
-  // function handleCreateEvent(event) {
-  //   // use spread operator to return a new array of events with the newly added event
-  //   setEvents([...events, event]);
-  // }
-
-  // function handleUpdateEvent(updatedEvent) {
-  //   setEvents(
-  //     events.map((evt) => (evt.id === updatedEvent.id ? updatedEvent : evt))
-  //   );
-  // }
-
-  function handleDeleteEvent(eventId) {
-    // remove the event by id from the events list
-    //setEvents(events.filter((evt) => evt.id !== eventId));
-  }
-
   return (
     <Grid>
       <GridColumn width={10}>
-        <EventList events={events} deleteEvent={handleDeleteEvent} />
+        <EventList events={events} />
       </GridColumn>
       <GridColumn width={6}>
         <input

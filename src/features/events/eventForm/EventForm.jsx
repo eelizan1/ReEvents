@@ -5,7 +5,7 @@ import cuid from "cuid";
 import { Link } from "react-router-dom";
 import { createEvent, updateEvent } from "../eventActions";
 
-export default function EventForm({ match }) {
+export default function EventForm({ match, history }) {
   const dispatch = useDispatch();
   // will populate the form with event details
   const selectedEvent = useSelector((state) =>
@@ -44,6 +44,9 @@ export default function EventForm({ match }) {
             hostPhotoURL: "/assets/user.png",
           })
         );
+
+    // bring back to event page
+    history.push("/events");
   }
 
   return (
